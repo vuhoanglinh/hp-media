@@ -1,0 +1,228 @@
+body {
+  font-family: 'Helvetica Neue', serif;
+  font-weight: 400;
+  font-style: normal;
+  /*font-size: 1em;*/
+  color: #353535;
+  position: relative; 
+}
+.font-noto {
+	font-family: 'Noto Serif', serif;
+}
+
+/* Material 
+* --------------------------------------- */
+.triangle-up,
+.triangle-down  {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.triangle-up {
+  border-bottom: 9px solid #353535;
+}
+.triangle-down {
+  border-top: 9px solid #353535;
+}
+/* FullPage extentions custom  
+* --------------------------------------- */
+#fp-nav ul li a span {
+	position: absolute;
+    z-index: 1;
+    height: 12px;
+    width: 12px;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    border: 3px solid #CDCDCD;
+    margin: -5px 0 0 -5px;
+    border-radius: 100%;
+}
+#fp-nav ul li .fp-tooltip.fp-right {
+    color: #353535;
+    display: none;
+}
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a span {
+	height: 12px;
+    width: 12px;
+    margin: -5px 0 0 -5px;
+    border-radius: 100%;
+    border-color: #EEBF70;
+}
+
+/* Main stylesheet 
+* --------------------------------------- */
+.wrapper {
+	position: relative;
+	/* Full height */
+	height: 100%; 
+	width: 100%;
+}
+.navbar-wrapper {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+}
+.navbar-content {
+	position: relative;
+	z-index: 50;
+	width: 60px;
+	height: 100%;
+	display: block;
+	background: #ffffff;
+}
+
+.navbar-content .social,
+.navbar-content .scrolltop {
+	position: absolute;
+	width: 100%;
+}
+
+.navbar-content .social {
+	bottom: 100px;
+}
+.navbar-content .social ul,
+.navbar-content .social li {
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.navbar-content .social li a {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 60px;
+	height: 40px;
+}
+.navbar-content .social a {
+	color: #CDCDCD;
+}
+.navbar-content .scrolltop {
+	bottom: 20px;
+	font-weight: 400;
+}
+.navbar-content .scrolltop a,
+.navbar-content .lang {
+	color: #353535;
+	display: table-cell;
+	vertical-align: middle;
+	width: 60px;
+	height: 60px;
+	text-decoration: none;
+}
+.navbar-content .scrolltop a .icon,
+.navbar-content .lang .icon {
+    display: inline;			
+}
+.navbar-content .scrolltop a .text {
+    display: block;
+    margin-top: 3px;		
+}
+.navbar-content .lang .text {
+	display: block;
+	margin-bottom: 3px;
+}
+.navbar-content .lang::after {
+	display: none;
+}
+.navbar-content .active-section {
+	margin-top: 60px;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+}
+.navbar-content .btn-nav {
+	color: #353535;
+	width: 60px;
+	height: 60px;
+}
+.navbar-wrapper .navbar {
+	position: absolute;
+	right: -400px;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    height: 100%;
+    background: #353535;
+    color: #fff;
+    -webkit-transition: left 0.3s ease, right 0.3s ease;
+    transition: left 0.3s ease, right 0.3s ease;
+    z-index: 10;
+    padding: 8em 2rem 0;
+}
+.navbar-wrapper .navbar.collapsing {
+    -webkit-transition: left 0.5s ease, right 0.5s ease;
+    transition: left 0.3s ease, right 0.5s ease;
+    display: block;
+}
+.navbar-wrapper .navbar.show {
+    right: 60px;
+    display: block;
+    -webkit-transition: left 0.3s ease, right 0.3s ease;
+    transition: left 0.3s ease, right 0.3s ease;
+}
+
+.navbar-wrapper .navbar .nav-link {
+	color: #ffffff;
+	border-bottom: 1px solid #464646;
+    font-family: "Noto Serif", serif;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.navbar-wrapper .navbar .content {
+	bottom: 1em;
+    right: 0;
+    left: 0;
+    padding: 1em 3rem;
+    position: absolute;
+}
+.navbar-wrapper .navbar .content h5 {
+	font-family: "Noto Serif", serif;
+	font-size: 18px;
+    margin-bottom: 25px;	
+    text-transform: uppercase;
+}
+.navbar-wrapper .navbar .content p {
+	font-size: 14px;
+  	font-weight: 400;
+	margin-bottom: 30px;		
+}
+
+.navbar-wrapper .navbar .content .btn {
+	background: url(../images/pattern/yellow.png) left top repeat;
+	font-size: 18px;	
+    padding: .575rem 1.75rem;
+    border-radius: 0;
+}
+
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+.section {
+	background-size: 100%;
+}
+
+.slide {
+	background-size: cover;
+}
+
+/* Defining each sectino background and styles
+* --------------------------------------- */
+.home {
+	background: url(../images/bg-home.jpg) center no-repeat;
+}
+
+.service {
+	background: url(../images/bg-service.jpg) center no-repeat;
+}
+
+.mission {
+	background: url(../images/bg-mission.jpg) center no-repeat;
+}
+
+.contact {
+	background: url(../images/bg-contact.jpg) center no-repeat;
+}
