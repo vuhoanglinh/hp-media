@@ -40,7 +40,8 @@ jQuery(document).ready(function($) {
 	        // sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B', '#7E8F7C'],
 	        navigation: true,
 	        navigationPosition: 'right',
-	        navigationTooltips: ['Home', 'Service', 'Partner', 'Library', 'Mission', 'Contact']
+	        navigationTooltips: ['Home', 'Service', 'Partner', 'Library', 'Mission', 'Contact'],
+	        slidesNavigation: true,
 	    });
 	}
 
@@ -48,7 +49,7 @@ jQuery(document).ready(function($) {
 
 	function locationHashChanged( e ) {
 	    console.log( location.hash );
-	    var hash = $(location).attr('hash').replace('#', '').toLowerCase();
+	    var hash = $(location).attr('hash').split('/')[0].replace('#', '').toLowerCase();
 	    $('#activeSection').text(translate(hash));
 	}
 

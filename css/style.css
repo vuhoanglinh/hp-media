@@ -27,14 +27,15 @@ body {
 }
 /* FullPage extentions custom  
 * --------------------------------------- */
-#fp-nav ul li a span {
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
 	position: absolute;
     z-index: 1;
     height: 12px;
     width: 12px;
     left: 50%;
     top: 50%;
-    background: #fff;
+    background: transparent;
     border: 3px solid #CDCDCD;
     margin: -5px 0 0 -5px;
     border-radius: 100%;
@@ -44,14 +45,55 @@ body {
     display: none;
 }
 #fp-nav ul li a.active span,
-#fp-nav ul li:hover a span {
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li a:hover span  {
 	height: 12px;
     width: 12px;
     margin: -5px 0 0 -5px;
     border-radius: 100%;
     border-color: #EEBF70;
 }
-
+.fp-slidesNav.fp-bottom {
+    bottom: 80px;
+    left: 150px!important;
+}
+.fp-controlArrow.fp-prev {
+    background-image: url(../images/icon-arrow-left.png), url(../images/pattern/gray.png);
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    background-size: 65%, contain;
+    left: 85px;
+    width: 50px;
+    height: 50px;
+    padding: 5px 10px;
+    color: #fff;
+    border: 0;
+}
+.fp-controlArrow.fp-prev:hover {
+	background-image: url(../images/icon-arrow-left.png), url(../images/pattern/yellow2.jpg);
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    background-size: 65%, contain;
+}
+.fp-controlArrow.fp-next {
+	background-image: url(../images/icon-arrow-right.png), url(../images/pattern/gray.png);
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    background-size: 65%, contain;
+    right: 85px;
+    width: 50px;
+    height: 50px;
+    padding: 5px 10px;
+    color: #fff;
+    border: 0;
+}
+.fp-controlArrow.fp-next:hover {
+	background-image: url(../images/icon-arrow-right.png), url(../images/pattern/yellow2.jpg);
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    background-size: 65%, contain;
+}
 /* Main stylesheet 
 * --------------------------------------- */
 .wrapper {
@@ -206,12 +248,36 @@ body {
 }
 
 .slide {
-	background-size: cover;
+	background-size: 100%;
+	color: #ffffff;
+	position: relative;
 }
-
+.slide .intro {
+    position: absolute;
+    bottom: 100px;
+    left: 150px;
+    color: #ffffff;
+}
+.slide .intro h1 {
+    font-family: "Noto Serif", serif;
+    font-size: 130px;
+    color: #EEBF70;
+    line-height: 1;
+}
+.slide .intro p {
+	font-size: 40px;
+	font-weight: 300;
+}
 /* Defining each sectino background and styles
 * --------------------------------------- */
-.home {
+.home,
+.home1 {
+	background: url(../images/bg-home.jpg) center no-repeat;
+}
+.home2 {
+	background: url(../images/bg-home.jpg) center no-repeat;
+}
+.home3 {
 	background: url(../images/bg-home.jpg) center no-repeat;
 }
 
