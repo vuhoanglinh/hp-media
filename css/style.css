@@ -275,7 +275,7 @@ body {
 }
 
 .navbar-wrapper .navbar .content .btn {
-	background: url(../images/pattern/yellow.png) left top repeat;
+	background: url(../images/pattern/yellow.jpg) left top repeat;
 	font-size: 18px;	
     padding: .575rem 1.75rem;
     border-radius: 0;
@@ -315,10 +315,10 @@ body {
 	background: url(../images/bg-home.jpg) center no-repeat;
 }
 .home2 {
-	background: url(../images/banner2.jpg) center no-repeat;
+	background: url(../images/bg-home2.jpg) center no-repeat;
 }
 .home3 {
-	background: url(../images/banner3.jpg) center no-repeat;
+	background: url(../images/bg-home3.jpg) center no-repeat;
 }
 
 .service {
@@ -327,6 +327,19 @@ body {
 
 .mission {
 	background: url(../images/bg-mission.jpg) center no-repeat;
+    position: relative;
+}
+
+.mission:after {
+    content: "";
+    position: absolute;
+    background: url('../images/stock1.png') bottom no-repeat;
+    background-size: contain;
+    bottom: 0;
+    right: 100px;
+    height: 600px;
+    width: 500px;
+    z-index: 100;
 }
 
 .contact {
@@ -334,15 +347,19 @@ body {
 }
 
 
-.service .service-content .title{
+.hp-title {
     font-family: "Noto Serif", serif;
     font-size: 50px;
     color: #EEBF70;
     line-height: 1;
+    margin-bottom: 2rem;
 }
 
-.service .service-content .text {
-    font-size: 22px;
+.hp-text {
+    font-size: 24px;
+}
+.hp-text-small {
+    font-size: 18px;
 }
 
 .service .card-deck {
@@ -412,3 +429,53 @@ body {
     background: #D5A896;
 }
 
+.mission .mission-content {
+    height: 400px;
+}
+
+.contact .contact-content .form-control {
+    height: calc(1.5em + .75rem + 15px);
+    border: 0;
+    border-radius: 0;
+}
+.contact .contact-content textarea.form-control {
+    height: calc(1.5em + .75rem + 82px)
+}
+
+.contact .contact-content .btn{
+    background: url(../images/pattern/yellow.jpg) left top repeat;
+    padding: .575rem .75rem;
+    border-radius: 0;
+}
+
+/* 
+  ##Device = Desktops Resolution 2K
+  ##Screen = 1921px to 2560px
+*/
+
+@media only screen and (min-width: 1921px) {
+    /* Defining each sectino background and styles
+    * --------------------------------------- */
+    .home,
+    .home1 {
+        background: url(../images/bg-home@2x.jpg) center no-repeat;
+    }
+    .home2 {
+        background: url(../images/bg-home2@2x.jpg) center no-repeat;
+    }
+    .home3 {
+        background: url(../images/bg-home3@2x.jpg) center no-repeat;
+    }
+
+    .service {
+        background: url(../images/bg-service@2x.jpg) center no-repeat;
+    }
+
+    .mission {
+        background: url(../images/bg-mission@2x.jpg) center no-repeat;
+    }
+
+    .contact {
+        background: url(../images/bg-contact@2x.jpg) center no-repeat;
+    }
+}
