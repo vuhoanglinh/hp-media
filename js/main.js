@@ -1,3 +1,4 @@
+var lang = 'en';
 var hpFullpage = null;
 var vi = {
 	home: 'Trang chủ',
@@ -21,10 +22,11 @@ jQuery(document).ready(function($) {
 	var hpmedia = {
 		init: function() {
 			$('[data-scroll]').on('click', this.scrollToSection);
-			this.fullPage();
-			this.lang(lang || 'en');
+			$('[data-expand]').on('click', this.expand);
+			this.lang();
 			this.locationHash();
 			this.enableTooltip();
+			this.fullPage();
 			window.onhashchange = this.locationHash;
 		},
 		scrollToSection: function(event) {
@@ -49,8 +51,9 @@ jQuery(document).ready(function($) {
 			    });
 			} catch(ex) {}
 		},
-		lang: function(value) {
-			$('.lang .text').text(value);
+		lang: function() {
+			lang = this.getUrlParameter('lang', 'en');
+			$('.lang .text').text(lang);
 		},
 		enableTooltip: function() {
 			$('[data-toggle="tooltip"]').tooltip();
@@ -59,7 +62,18 @@ jQuery(document).ready(function($) {
 			console.log( location.hash );
 		    var hash = $(location).attr('hash').split('/')[0].replace('#', '').toLowerCase();
 		    $('#activeSection').text(translate(hash));
-		}
+		},
+		getUrlParameter: function(name, defaultValue = '') {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? defaultValue : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        },
+        expand: function() {
+        	var element = $(this).attr('data-target');
+        	$(element).parent().toggleClass('processed');
+        	$(element).toggleClass('expanded');
+        }
 	}
 
 	hpmedia.init();

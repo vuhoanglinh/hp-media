@@ -77,6 +77,33 @@ body {
   top: -4px;
   transform: rotate(45deg);
 }
+
+.icon-close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.icon-close:hover {
+  opacity: 1;
+}
+.icon-close:before, .icon-close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.icon-close:before {
+  transform: rotate(45deg);
+}
+.icon-close:after {
+  transform: rotate(-45deg);
+}
+
 /* FullPage extentions custom  
 * --------------------------------------- */
 #fp-nav ul li a span,
@@ -311,7 +338,8 @@ body {
 	margin-bottom: 30px;		
 }
 
-.navbar-wrapper .navbar .content .btn {
+.navbar-wrapper .navbar .content .btn,
+.btn-hp {
 	/*background: url(../images/pattern/yellow.jpg) left top repeat;*/
     background: #eca633 url(../images/pattern/pattern.png) left top repeat;
     background-size: contain;
@@ -391,7 +419,7 @@ body {
     font-size: 50px;
     color: #EEBF70;
     line-height: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hp-text {
@@ -406,7 +434,6 @@ body {
 }
 .service .card {
     height: 320px;
-    cursor: pointer;
     border-radius: 0;
     border: 0;
     position: relative;
@@ -448,6 +475,7 @@ body {
     background-position: center top;
     background-repeat: repeat;
     background-size: contain;
+    cursor: pointer;
 }
 .service .card.one{
     background: #B0D9B8;
@@ -489,6 +517,85 @@ body {
 .service .card.four .icon-plus:after {
     background-color: #C19C8D;
 }
+
+/* Treat to set up transition for card
+* Begin
+* --------------------------------------- */
+.service .card-deck.animation {
+    position: relative;
+    width: 1140px;
+    height: 400px;
+    margin: 1rem auto 0;
+}
+.service .card-deck.animation .card {
+    height: initial;
+    top: 0;
+    bottom: 80px;
+    margin: 0;
+    position: absolute;
+    overflow: hidden;
+    transition: right .2s linear,
+              bottom .2s linear,
+              top .2s linear,
+              left .2s linear,
+              line-height .2s linear,
+              height .2s linear,
+              z-index .2s linear;
+
+}
+.service .card-deck.animation .card.one {
+    left: 0;
+    right: 885px;
+}
+.service .card-deck.animation .card.two {
+    left: 285px;
+    right: 600px;
+}
+.service .card-deck.animation .card.three {
+    left: 570px;
+    right: 315px;
+}
+.service .card-deck.animation .card.four {
+    left: 855px;
+    right: 30px;
+}
+.service .card-deck.animation .card.expanding,
+.service .card-deck.animation .card.expanded {
+    top: 0;
+    right: 100px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    visibility: visible;
+}
+.service .card-deck.processing .card,
+.service .card-deck.processed .card {
+    visibility: hidden;
+}
+.service .card-deck.animation .card.expanding .card-icon,
+.service .card-deck.animation .card.expanded .card-icon {
+    display: none;
+}
+
+.service .card .card-close,
+.service .card .card-text {
+    display: none;
+}
+.service .card .card-close > a {
+    right: 15px;
+    top: 15px;
+}
+.service .card.expanding .card-close,
+.service .card.expanded .card-close,
+.service .card.expanding .card-text,
+.service .card.expanded .card-text {
+    display: block;
+}
+/* Treat to set up transition for card
+* End
+* --------------------------------------- */
+
+
 .mission .mission-content {
     height: 400px;
 }
@@ -502,12 +609,12 @@ body {
     height: calc(1.5em + .75rem + 82px)
 }
 
-.contact .contact-content .btn{
+/*.contact .contact-content .btn {
     background: #eca633 url(../images/pattern/pattern.png) left top repeat;
     background-size: contain;
     padding: .575rem .75rem;
     border-radius: 0;
-}
+}*/
 
 /* 
   ##Device = Desktops Resolution 2K
