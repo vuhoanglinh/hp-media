@@ -17,7 +17,6 @@ function translate(text) {
 	return text;
 }
 
-
 jQuery(document).ready(function($) {
 	function scrollToSection(event) {
 	    event.preventDefault();
@@ -45,6 +44,10 @@ jQuery(document).ready(function($) {
 	    });
 	}
 
+	function initLang(value) {
+	    $('.lang>.text').text(value);
+	}
+
 	fullPage();
 
 	function locationHashChanged( e ) {
@@ -55,4 +58,5 @@ jQuery(document).ready(function($) {
 
 	window.onhashchange = locationHashChanged;
 	locationHashChanged();
+	initLang(lang || 'en');
 }(jQuery));	

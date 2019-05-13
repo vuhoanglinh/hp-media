@@ -51,6 +51,32 @@ body {
   height: 4px;
   margin-top: -2px;
 }
+
+.icon-arrow {
+  background: #fff;
+  height: 3px;
+  width: 30px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+}
+.icon-arrow:before, .icon-arrow:after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  height: 3px;
+  width: 15px;
+}
+.icon-arrow:before {
+  right: -3px;
+  bottom: -4px;
+  transform: rotate(-45deg);
+}
+.icon-arrow:after {
+  right: -3px;
+  top: -4px;
+  transform: rotate(45deg);
+}
 /* FullPage extentions custom  
 * --------------------------------------- */
 #fp-nav ul li a span,
@@ -74,6 +100,7 @@ body {
 #fp-nav ul li a.active:hover span,
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li a.active:hover span,
 .fp-slidesNav ul li a:hover span  {
 	height: 12px;
     width: 12px;
@@ -86,7 +113,9 @@ body {
     left: 150px!important;
 }
 .fp-controlArrow.fp-prev {
-    background-image: url(../images/icon-arrow-left.png), url(../images/pattern/gray.png);
+    /*background-image: url(../images/icon-arrow-left.png), url(../images/pattern/gray.png);*/
+    background: url(../images/icon-arrow-left.png), #211f1f url(../images/pattern/pattern.png);
+    background-position: center, center;
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     background-size: 65%, contain;
@@ -98,13 +127,15 @@ body {
     border: 0;
 }
 .fp-controlArrow.fp-prev:hover {
-	background-image: url(../images/icon-arrow-left.png), url(../images/pattern/yellow2.jpg);
+	/*background-image: url(../images/icon-arrow-left.png), url(../images/pattern/yellow2.jpg);*/
+    background: url(../images/icon-arrow-left.png), #eca733 url(../images/pattern/pattern.png);
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     background-size: 65%, contain;
 }
 .fp-controlArrow.fp-next {
-	background-image: url(../images/icon-arrow-right.png), url(../images/pattern/gray.png);
+	/*background-image: url(../images/icon-arrow-right.png), url(../images/pattern/gray.png);*/
+    background: url(../images/icon-arrow-right.png), #211f1f url(../images/pattern/pattern.png);
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     background-size: 65%, contain;
@@ -116,7 +147,8 @@ body {
     border: 0;
 }
 .fp-controlArrow.fp-next:hover {
-	background-image: url(../images/icon-arrow-right.png), url(../images/pattern/yellow2.jpg);
+	/*background-image: url(../images/icon-arrow-right.png), url(../images/pattern/yellow2.jpg);*/
+    background: url(../images/icon-arrow-right.png), #eca733 url(../images/pattern/pattern.png);
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     background-size: 65%, contain;
@@ -202,11 +234,15 @@ body {
     margin-top: 3px;		
 }
 .navbar-content .lang {
-    height: 80px;
+    min-height: 80px;
+}
+.navbar-content .lang a {
+    color: #353535;
 }
 .navbar-content .lang .text {
 	display: block;
 	margin-bottom: 3px;
+    text-transform: uppercase;
 }
 .navbar-content .lang::after {
 	display: none;
@@ -215,6 +251,7 @@ body {
 	margin-top: 60px;
     transform: rotate(-90deg);
     text-transform: uppercase;
+    white-space: nowrap;
 }
 .navbar-content .btn-nav {
 	color: #353535;
@@ -275,7 +312,9 @@ body {
 }
 
 .navbar-wrapper .navbar .content .btn {
-	background: url(../images/pattern/yellow.jpg) left top repeat;
+	/*background: url(../images/pattern/yellow.jpg) left top repeat;*/
+    background: #eca633 url(../images/pattern/pattern.png) left top repeat;
+    background-size: contain;
 	font-size: 18px;	
     padding: .575rem 1.75rem;
     border-radius: 0;
@@ -404,31 +443,52 @@ body {
     border: 0;
     font-size: 13px;
 }
-.service .card.one {
+.service .card .card-icon {
+    background-image: url(../images/pattern/pattern.png);
+    background-position: center top;
+    background-repeat: repeat;
+    background-size: contain;
+}
+.service .card.one{
     background: #B0D9B8;
 }
 .service .card.one .card-icon {
-    background: #9FD1A9;
+    background-color: #9FD1A9;
+}
+.service .card.one .icon-plus:before,
+.service .card.one .icon-plus:after {
+    background-color: #93C69D;
 }
 .service .card.two {
     background: #D1C6BF;
 }
 .service .card.two .card-icon {
-    background: #C5B5AA;
+    background-color: #C5B5AA;
+}
+.service .card.two .icon-plus:before,
+.service .card.two .icon-plus:after {
+    background-color: #BAABA1;
 }
 .service .card.three {
     background: #EACE9F;
 }
-.service .card.three .card-icon {
-    background: #DFC08C;
+.service .card.three .card-icon{
+    background-color: #DFC08C;
+}
+.service .card.three .icon-plus:before,
+.service .card.three .icon-plus:after {
+    background-color: #D6B988;
 }
 .service .card.four {
     background: #E1B7A7;
 }
 .service .card.four .card-icon {
-    background: #D5A896;
+    background-color: #D5A896;
 }
-
+.service .card.four .icon-plus:before,
+.service .card.four .icon-plus:after {
+    background-color: #C19C8D;
+}
 .mission .mission-content {
     height: 400px;
 }
@@ -443,7 +503,8 @@ body {
 }
 
 .contact .contact-content .btn{
-    background: url(../images/pattern/yellow.jpg) left top repeat;
+    background: #eca633 url(../images/pattern/pattern.png) left top repeat;
+    background-size: contain;
     padding: .575rem .75rem;
     border-radius: 0;
 }
