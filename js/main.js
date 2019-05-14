@@ -95,6 +95,39 @@ jQuery(document).ready(function($) {
 			setTimeout(function() {
 				$('.overlay').toggleClass('open');
 			}, 1000);
+			this.applySlick();
+        },
+        applySlick: function() {
+        	$('[data-slick]').slick({
+			  	slidesToShow: 4,
+			  	slidesToScroll: 3,
+  				arrows: true,
+  				infinite: false
+			});
+
+			$('[data-slick-filter]').on('click', function(event) {
+				event.preventDefault();
+				const target = $(this).attr('data-target');
+				const type = $(this).attr('data-filter-type');
+
+				if ($(target).hasClass('filtered')) {
+                    $(target).slick('slickUnfilter');
+                    $(target).slick('slickGoTo', 0);
+                } else {
+                    $(target).addClass('filtered');
+                }
+
+				$('[data-slick-filter]').removeClass('active');
+				$(target).addClass('active');
+
+				if ( type == '.all' || type == 'all') {
+					$('.slider').removeClass('filtered');
+					$(target).slick('slickUnfilter');
+				} else {
+					$(target).slick('slickFilter', type);
+				}
+				$(target).slick('slickGoTo',0);
+			});
         }
 	}
 

@@ -147,6 +147,102 @@ body {
 .icon-close:after {
   transform: rotate(-45deg);
 }
+@-webkit-keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
 
 /* FullPage extentions custom  
 * --------------------------------------- */
@@ -183,46 +279,81 @@ body {
     bottom: 80px;
     left: 150px!important;
 }
-.fp-controlArrow.fp-prev {
+.fp-controlArrow.fp-prev,
+.slick-prev:before {
     /*background-image: url(../images/icon-arrow-left.png), url(../images/pattern/gray.png);*/
     background: url(../images/icon-arrow-left.png), #211f1f url(../images/pattern/pattern.png);
     background-position: center, center;
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     background-size: 65%, contain;
-    left: 85px;
     width: 50px;
     height: 50px;
     padding: 5px 10px;
     color: #fff;
     border: 0;
 }
-.fp-controlArrow.fp-prev:hover {
+.fp-controlArrow.fp-prev:hover,
+.slick-prev:hover:before {
 	/*background-image: url(../images/icon-arrow-left.png), url(../images/pattern/yellow2.jpg);*/
     background: url(../images/icon-arrow-left.png), #eca733 url(../images/pattern/pattern.png);
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     background-size: 65%, contain;
 }
-.fp-controlArrow.fp-next {
+.fp-controlArrow.fp-next,
+.slick-next:before {
 	/*background-image: url(../images/icon-arrow-right.png), url(../images/pattern/gray.png);*/
     background: url(../images/icon-arrow-right.png), #211f1f url(../images/pattern/pattern.png);
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     background-size: 65%, contain;
-    right: 85px;
     width: 50px;
     height: 50px;
     padding: 5px 10px;
     color: #fff;
     border: 0;
 }
-.fp-controlArrow.fp-next:hover {
+.fp-controlArrow.fp-next:hover,
+.slick-next:hover:before {
 	/*background-image: url(../images/icon-arrow-right.png), url(../images/pattern/yellow2.jpg);*/
     background: url(../images/icon-arrow-right.png), #eca733 url(../images/pattern/pattern.png);
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     background-size: 65%, contain;
+}
+.fp-controlArrow.fp-prev {
+    left: 85px;
+}
+.fp-controlArrow.fp-next {
+    right: 85px;
+}
+.slick-prev,
+.slick-next {
+    width: 50px;
+    height: 50px;
+}
+.slick-prev:before,
+.slick-next:before {
+    content: "";
+    display: block;
+}
+
+.slick-next {
+    display: block;
+    bottom: -70px;
+    top: initial;
+    right: 0;
+    z-index: 999;
+}
+
+.slick-prev {
+    display: block;
+    bottom: -70px;
+    top: initial;
+    left: initial;
+    right: 100px;
+    z-index: 999;
 }
 /* Main stylesheet 
 * --------------------------------------- */
@@ -480,6 +611,57 @@ body {
 .partner .partner-list .item .hp-title {
     margin: 0;
 }
+.library-list {
+    position: relative;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.library-list .item {
+    padding: 0 15px;
+    outline: none!important;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+}
+.library-list .card {
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+}
+.library-list .card-img-top {
+    border-radius: 0;
+}
+.library-list .card-title {
+    font-family: "Noto Serif", serif;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: .5rem;
+}
+.library-list .card-body {
+    padding: 1.75rem 0;
+}
+.library-content .nav {
+    width: 70%;
+    border-bottom: 2px solid #CDCDCD;
+}
+
+.library-content .nav-link {
+    font-family: "Noto Serif", serif;
+    color: #353535;
+}
+.library-content .navbar {
+    padding: 0;
+}
+.library-content .nav-link:hover,
+.library-content .nav-link.active {
+    border-bottom: 2px solid #EEBF70;
+    margin-bottom: -2px;    
+}
+.library-content .nav .nav-item:first-child>.nav-link {
+    padding-left: 0;
+}
+
 
 .contact {
 	background: url(../images/bg-contact.jpg) center no-repeat;
