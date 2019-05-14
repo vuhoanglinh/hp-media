@@ -12,20 +12,34 @@ function translate(text) {
 	if (!lang) return text;
 
 	if (lang == 'vi') {
-		return vi[text] || text;
+		return vi[text] || vi.home;
 	}
 
 	return text;
 }
 
 jQuery(document).ready(function($) {
+	$.fn.textcounter = function() {
+	    try {
+	    	const element = $(this);
+        	const limit = parseInt(element.attr('data-text-limit') || 1000);
+    		element.append(`<span class="counter">0/${limit}</span>`);
+			const target = element.attr('data-target');
+			$(target).attr('maxlength', limit);
+			$(target).keyup(function() {
+			 	let length = limit - parseInt($(this).val().length);
+			  	element.find('.counter').text(`${length}/${limit}`);
+			});
+    	} catch(ex) {
+    		console.log('error:', ex);
+    	}
+	};
+
 	var hpmedia = {
 		init: function() {
-			$('[data-scroll]').on('click', this.scrollToSection);
-			$('[data-expand]').on('click', this.expand);
+			this.enableStuffs();
 			this.lang();
 			this.locationHash();
-			this.enableTooltip();
 			this.fullPage();
 			window.onhashchange = this.locationHash;
 		},
@@ -35,7 +49,7 @@ jQuery(document).ready(function($) {
 		    // $('html, body').animate({
 		    //   scrollTop: $section.offset().top - 200
 		    // }, 500);
-		    if (section) {
+		    if (section && hpFullpage) {
 		    	hpFullpage.moveTo(section);
 		    }
 		},
@@ -55,9 +69,6 @@ jQuery(document).ready(function($) {
 			lang = this.getUrlParameter('lang', 'en');
 			$('.lang .text').text(lang);
 		},
-		enableTooltip: function() {
-			$('[data-toggle="tooltip"]').tooltip();
-		},
 		locationHash: function() {
 			console.log( location.hash );
 		    var hash = $(location).attr('hash').split('/')[0].replace('#', '').toLowerCase();
@@ -73,6 +84,17 @@ jQuery(document).ready(function($) {
         	var element = $(this).attr('data-target');
         	$(element).parent().toggleClass('processed');
         	$(element).toggleClass('expanded');
+        },
+        enableStuffs: function() {
+			$('[data-toggle="tooltip"]').tooltip();
+			$('[data-scroll]').on('click', this.scrollToSection);
+			$('[data-expand]').on('click', this.expand);
+			$('[data-text-count]').textcounter();
+
+			$('.overlay').toggleClass('open');
+			setTimeout(function() {
+				$('.overlay').toggleClass('open');
+			}, 1000);
         }
 	}
 
