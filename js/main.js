@@ -41,29 +41,44 @@ jQuery(document).ready(function($) {
 			this.lang();
 			this.locationHash();
 			this.fullPage();
+			this.scrollTop();
 			window.onhashchange = this.locationHash;
 		},
 		scrollToSection: function(event) {
-			event.preventDefault();
-		    var section = $(this).attr('href').replace('#', ''); 
-		    // $('html, body').animate({
-		    //   scrollTop: $section.offset().top - 200
-		    // }, 500);
-		    if (section && hpFullpage) {
-		    	hpFullpage.moveTo(section);
-		    }
+			try {
+				var section = $(this).attr('href').split('#'); 
+			    section = section[section.length - 1];
+			    
+			    if (section && hpFullpage) {
+					event.preventDefault();
+			    	hpFullpage.moveTo(section);
+			    }
+			} catch(ex) {
+				console.error(ex);
+			}
+		},
+		scrollTop: function() {
+			$('[data-scoll-top]').on('click', function() {
+				$('html, body').animate({
+			      scrollTop: 0
+			    }, 500);
+			});
 		},
 		fullPage: function() {
 			try {
-				hpFullpage = new fullpage('#fullpage', {
-			        anchors: ['home', 'service', 'partner', 'library', 'mission', 'contact'],
-			        // sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B', '#7E8F7C'],
-			        navigation: true,
-			        navigationPosition: 'right',
-			        navigationTooltips: ['Home', 'Service', 'Partner', 'Library', 'Mission', 'Contact'],
-			        slidesNavigation: true,
-			    });
-			} catch(ex) {}
+				if ($('#fullpage')) {
+					hpFullpage = new fullpage('#fullpage', {
+				        anchors: ['home', 'service', 'partner', 'library', 'mission', 'contact'],
+				        // sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B', '#7E8F7C'],
+				        navigation: true,
+				        navigationPosition: 'right',
+				        navigationTooltips: ['Home', 'Service', 'Partner', 'Library', 'Mission', 'Contact'],
+				        slidesNavigation: true,
+				    });
+				}
+			} catch(ex) {
+				console.error(ex);
+			}
 		},
 		lang: function() {
 			lang = this.getUrlParameter('lang', 'en');
@@ -98,13 +113,58 @@ jQuery(document).ready(function($) {
 			this.applySlick();
         },
         applySlick: function() {
+        	// Apply carousel for one item per page
+        	$('[data-slick-one]').slick({
+			  	slidesToShow: 1,
+			  	slidesToScroll: 1,
+  				infinite: true,
+  				autoplay: true,
+  				autoplaySpeed: 2000,
+  				arrows: false,
+  				dots: false
+  			});
+
+        	// Apply carousel for library media
         	$('[data-slick]').slick({
 			  	slidesToShow: 4,
 			  	slidesToScroll: 3,
   				arrows: true,
-  				infinite: false
+  				infinite: false,
+  				responsive: [
+				    {
+				      	breakpoint: 1024,
+				      	settings: {
+					        slidesToShow: 3,
+					        slidesToScroll: 3,
+					        arrows: true,
+  							infinite: false,
+					    }
+				    },
+				    {
+				      	breakpoint: 600,
+				      	settings: {
+					        slidesToShow: 2,
+					        slidesToScroll: 1,
+					        arrows: true,
+  							infinite: false,
+					    }
+				    },
+				    {
+				      	breakpoint: 480,
+				      	settings: {
+					        slidesToShow: 1,
+					        slidesToScroll: 1,
+					        arrows: true,
+  							infinite: false,
+					    }
+				    }
+				    // You can unslick at a given breakpoint now by adding:
+				    // settings: "unslick"
+				    // instead of a settings object
+				  ]
 			});
 
+        	// Apply filter for library media
 			$('[data-slick-filter]').on('click', function(event) {
 				event.preventDefault();
 				const target = $(this).attr('data-target');
@@ -118,7 +178,7 @@ jQuery(document).ready(function($) {
                 }
 
 				$('[data-slick-filter]').removeClass('active');
-				$(target).addClass('active');
+				$(this).addClass('active');
 
 				if ( type == '.all' || type == 'all') {
 					$('.slider').removeClass('filtered');

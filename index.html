@@ -20,14 +20,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <link rel="stylesheet" href="css/style.css?v=2" />
+    <link rel="stylesheet" href="css/style.css?v=3" />
 </head>
 
 <body>
     <div class="overlay overlay-door"></div>
     
     <div class="wrapper">
-        <a href="#home" data-scroll class="logo"></a>
+        <a href="index.html#home" class="logo"></a>
         <div class="navbar-wrapper">
             <div class="navbar-content">
                 <button class="btn btn-link btn-nav" type="button" data-toggle="collapse" data-target="#nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
@@ -57,7 +57,7 @@
                     </ul>
                 </div>
                 <div class="scrolltop">
-                    <a href="#home" data-scroll class="text-center">
+                    <a href="javascript:;" data-scoll-top class="text-center">
                         <span class="triangle-up icon"></span> 
                         <span class="text">Top</span>
                     </a>
@@ -66,12 +66,12 @@
 
             <div id="nav" class="navbar collapse">
                 <nav class="nav flex-column">
-                    <a class="nav-link" href="#home" data-scroll>Home</a>
-                    <a class="nav-link" href="#service" data-scroll>Service</a>
-                    <a class="nav-link" href="#partner" data-scroll>Partner</a>
-                    <a class="nav-link" href="#library" data-scroll>Library</a>
-                    <a class="nav-link" href="#mission" data-scroll>Mission</a>
-                    <a class="nav-link" href="#contact" data-scroll>Contact</a>
+                    <a class="nav-link" href="index.html#home">Home</a>
+                    <a class="nav-link" href="index.html#service">Service</a>
+                    <a class="nav-link" href="index.html#partner">Partner</a>
+                    <a class="nav-link" href="index.html#library">Library</a>
+                    <a class="nav-link" href="index.html#mission">Mission</a>
+                    <a class="nav-link" href="index.html#contact">Contact</a>
                 </nav>
 
                 <div class="content">
@@ -82,6 +82,7 @@
             </div>
 
         </div>
+
         <div id="fullpage">
             <div class="section home">
                 <div class="slide home1" id="home1" data-anchor="home1">
@@ -118,7 +119,7 @@
                         <p class="hp-text">It is a long established fact that a reader will be distracted by the readable <br/> content of a page when looking at its layout.</p>
                     </div>
 
-                    <div class="card-deck animation">
+                    <div class="card-deck animation service-list">
                         <div id="card-media" class="card one">
                             <div class="card-close">
                                 <a href="javascript:;" class="icon-close" data-expand="data-expand" data-target="#card-media"></a>
@@ -134,7 +135,7 @@
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-                                            <a href="#" class="btn btn-hp">View more</a>
+                                            <a href="media.html" class="btn btn-hp">View more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +163,7 @@
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-                                            <a href="#" class="btn btn-hp">View more</a>
+                                            <a href="media.html" class="btn btn-hp">View more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -190,7 +191,7 @@
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-                                            <a href="#" class="btn btn-hp">View more</a>
+                                            <a href="media.html" class="btn btn-hp">View more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -218,7 +219,7 @@
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-                                            <a href="#" class="btn btn-hp">View more</a>
+                                            <a href="media.html" class="btn btn-hp">View more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -344,20 +345,20 @@
                         <nav class="navbar">
                             <h3 class="navbar-brand hp-title">Library</h3>
                             <div class="nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#" data-slick-filter data-target="#library-list" data-filter-type=".all">All Library</a>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#" data-slick-filter data-target="#library-list" data-filter-type=".all" data-hover="All Library">All Library</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" data-slick-filter data-target="#library-list" data-filter-type=".media">The Media</a>
+                                    <a class="nav-link" href="#" data-slick-filter data-target="#library-list" data-filter-type=".media" data-hover="The Media">The Media</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" data-slick-filter data-target="#library-list" data-filter-type=".event">Event</a>
+                                    <a class="nav-link" href="#" data-slick-filter data-target="#library-list" data-filter-type=".event" data-hover="Event">Event</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" data-slick-filter data-target="#library-list" data-filter-type=".architecture">Architecture</a>
+                                    <a class="nav-link" href="#" data-slick-filter data-target="#library-list" data-filter-type=".architecture" data-hover="Architecture">Architecture</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" data-slick-filter data-target="#library-list" data-filter-type=".development">Real Estate Development</a>
+                                    <a class="nav-link" href="#" data-slick-filter data-target="#library-list" data-filter-type=".development" data-hover="Real Estate Development">Real Estate Development</a>
                                 </li>
                             </div>
                         </nav>
@@ -365,323 +366,323 @@
 
                         <div id="library-list" class="library-list" data-slick>
                             <div class="item architecture all">
-                                <div class="card">
-                                  <img src="images/media/media1.jpg" class="card-img-top">
-                                  <div class="card-body">
-                                    <h5 class="card-title">SaiGonLand Project</h5>
-                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                  </div>
-                                </div>
+                                <a href="project.html" class="card">
+                                    <img src="images/media/media1.jpg" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">SaiGonLand Project</h5>
+                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="item event all">
-                                <div class="card">
-                                  <img src="images/media/media4.jpg" class="card-img-top">
-                                  <div class="card-body">
-                                    <h5 class="card-title">SaiGonLand Project</h5>
-                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                  </div>
-                                </div>
+                                <a href="project.html" class="card">
+                                    <img src="images/media/media4.jpg" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">SaiGonLand Project</h5>
+                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
-                                  <img src="images/media/media2.jpg" class="card-img-top">
-                                  <div class="card-body">
-                                    <h5 class="card-title">SaiGonLand Project</h5>
-                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                  </div>
-                                </div>
+                                <a href="project.html" class="card">
+                                    <img src="images/media/media2.jpg" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">SaiGonLand Project</h5>
+                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="item development all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media3.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item development all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media1.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media4.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item event all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media2.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media3.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item architecture all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media1.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                  </div>
+                                  </a>
                                 </div>
                             </div>
 
                             <div class="item event all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media4.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media2.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item development all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media3.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item development all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media1.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media4.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item event all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media2.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media3.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item architecture all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media1.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item event all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media4.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media2.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item development all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media3.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item development all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media1.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media4.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item event all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media2.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media3.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item architecture all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media1.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item event all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media4.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media2.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item development all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media3.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item development all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media1.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media4.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item event all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media2.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="item media all">
-                                <div class="card">
+                                <a href="project.html" class="card">
                                   <img src="images/media/media3.jpg" class="card-img-top">
                                   <div class="card-body">
                                     <h5 class="card-title">SaiGonLand Project</h5>
                                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting</p>
                                   </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -724,7 +725,7 @@
 
                         <div class="row justify-content-end">
                             <div class="col-md-9">
-                                <form>
+                                <form class="hp-form light">
                                     <div class="form-row">
                                         <div class="col">
                                             <div class="form-group">

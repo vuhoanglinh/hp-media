@@ -280,48 +280,38 @@ body {
     left: 150px!important;
 }
 .fp-controlArrow.fp-prev,
-.slick-prev:before {
-    /*background-image: url(../images/icon-arrow-left.png), url(../images/pattern/gray.png);*/
-    background: url(../images/icon-arrow-left.png), #211f1f url(../images/pattern/pattern.png);
+.slick-prev:before,
+.fp-controlArrow.fp-next,
+.slick-next:before,
+.btn-prev,
+.btn-next {
+    background: url(../images/icon-arrow-white.svg), url(../images/pattern/pattern.png);
+    background-color: #211f1f;
     background-position: center, center;
     background-position: center, center;
     background-repeat: no-repeat, repeat;
-    background-size: 65%, contain;
+    background-size: 30px, contain;
     width: 50px;
     height: 50px;
     padding: 5px 10px;
     color: #fff;
     border: 0;
+    border-radius: 0;
 }
 .fp-controlArrow.fp-prev:hover,
-.slick-prev:hover:before {
-	/*background-image: url(../images/icon-arrow-left.png), url(../images/pattern/yellow2.jpg);*/
-    background: url(../images/icon-arrow-left.png), #eca733 url(../images/pattern/pattern.png);
-    background-position: center, center;
-    background-repeat: no-repeat, repeat;
-    background-size: 65%, contain;
+.fp-controlArrow.fp-next:hover,
+.slick-next:hover:before,
+.slick-prev:hover:before,
+.btn-prev:hover,
+.btn-next:hover {
+    background-color: #eca733;
 }
 .fp-controlArrow.fp-next,
-.slick-next:before {
-	/*background-image: url(../images/icon-arrow-right.png), url(../images/pattern/gray.png);*/
-    background: url(../images/icon-arrow-right.png), #211f1f url(../images/pattern/pattern.png);
-    background-position: center, center;
-    background-repeat: no-repeat, repeat;
-    background-size: 65%, contain;
-    width: 50px;
-    height: 50px;
-    padding: 5px 10px;
-    color: #fff;
-    border: 0;
+.slick-next:before,
+.btn-next {
+    transform: rotate(180deg);
 }
-.fp-controlArrow.fp-next:hover,
-.slick-next:hover:before {
-	/*background-image: url(../images/icon-arrow-right.png), url(../images/pattern/yellow2.jpg);*/
-    background: url(../images/icon-arrow-right.png), #eca733 url(../images/pattern/pattern.png);
-    background-position: center, center;
-    background-repeat: no-repeat, repeat;
-    background-size: 65%, contain;
-}
+
 .fp-controlArrow.fp-prev {
     left: 85px;
 }
@@ -362,6 +352,9 @@ body {
 	/* Full height */
 	height: 100%; 
 	width: 100%;
+}
+.wrapper-top {
+    margin-bottom: 40px;
 }
 .logo {
     position: fixed;
@@ -522,6 +515,35 @@ body {
     padding: .575rem 1.75rem;
     border-radius: 0;
 }
+.btn-hp.arrow-black {
+    background: url(../images/icon-arrow-black.svg) 10px center no-repeat, url(../images/pattern/pattern.png) left top repeat;
+    background-color: #cdcdcd;
+    background-size: 30px ,contain;
+    padding: .575rem 1.75rem .575rem 3.25rem;
+}
+
+.btn-hp.arrow-black:hover {
+    background: url(../images/icon-arrow-white.svg) 10px center no-repeat, #353535 url(../images/pattern/pattern.png) left top repeat;
+    background-size: 30px, contain;
+    color: #ffffff;
+}
+
+.btn-hp.arrow-left.white {
+    background: url(../images/icon-arrow-white.svg) 10px center no-repeat, #353535 url(../images/pattern/pattern.png) left top repeat;
+    background-size: 30px ,contain;
+    padding: .575rem 1.75rem .575rem 3.25rem;
+}
+
+.btn-hp.arrow-white.rotate,
+.btn-hp.arrow-right.white {
+    transform: rotate(180deg);
+    background: url(../images/icon-arrow-white.svg) 10px center no-repeat, #353535 url(../images/pattern/pattern.png) left top repeat;
+    background-size: 30px ,contain;
+    padding: .575rem 1.75rem .575rem 3.25rem;
+}
+.gray {
+    background-color: #CDCDCD;
+}
 
 /* Backgrounds will cover all the section
 * --------------------------------------- */
@@ -623,11 +645,19 @@ body {
     animation-duration: 0.75s;
     -webkit-animation-name: bounceIn;
     animation-name: bounceIn;
+    margin-bottom: 20px;
 }
+.library-list.block .item {
+    padding: 0;
+}
+
 .library-list .card {
     border-radius: 0;
     border: 0;
     box-shadow: none;
+    color: #353535;
+    text-decoration: none;
+    outline: none!important;
 }
 .library-list .card-img-top {
     border-radius: 0;
@@ -639,7 +669,8 @@ body {
     margin-bottom: .5rem;
 }
 .library-list .card-body {
-    padding: 1.75rem 0;
+    /*padding: 1.75rem 0;*/
+    padding: 1.75rem .85em;
 }
 .library-content .nav {
     width: 70%;
@@ -649,19 +680,52 @@ body {
 .library-content .nav-link {
     font-family: "Noto Serif", serif;
     color: #353535;
+    padding: .5rem 1rem;
 }
 .library-content .navbar {
     padding: 0;
 }
-.library-content .nav-link:hover,
+/*.library-content .nav-link:hover,
 .library-content .nav-link.active {
     border-bottom: 2px solid #EEBF70;
     margin-bottom: -2px;    
-}
-.library-content .nav .nav-item:first-child>.nav-link {
+}*/
+.library-content .nav .nav-item:first-child>.nav-link,
+.library-content .nav .nav-item:first-child>.nav-link:before {
     padding-left: 0;
 }
 
+.library-content .nav-link {
+    border-bottom: 2px solid #CDCDCD;
+    margin-bottom: -2px; 
+    color: #353535;
+    position: relative;
+    white-space: nowrap;
+} 
+
+.library-content .nav-link:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    white-space: nowrap;
+    display: block;
+    padding: .5rem 1rem;
+    visibility: hidden;
+    border-bottom: 2px solid #EEBF70;
+    color: #EEBF70;
+    content: attr(data-hover);
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.library-content .nav-link:hover:before,
+.library-content .nav-link:focus:before {
+    width: 100%;
+    visibility: visible;
+}
 
 .contact {
 	background: url(../images/bg-contact.jpg) center no-repeat;
@@ -684,22 +748,23 @@ body {
     font-size: 18px;
 }
 
-.service .card-deck {
+.service .service-list {
     margin-top: 3em;
 }
-.service .card {
+.service-list .card {
     height: 320px;
     border-radius: 0;
     border: 0;
     position: relative;
     overflow: hidden;
+    margin-bottom: 40px;
 }
-.service .card .card-title {
+.service-list .card .card-title {
     font-family: "Noto Serif", serif;
     font-size: 24px;
     line-height: 1.2;
 }
-.service .card .card-icon {
+.service-list .card .card-icon {
     width: 130px;
     height: 130px;
     background: rgba(255, 255, 255, 0.2);
@@ -715,74 +780,74 @@ body {
     transition: left 0.3s ease, right 0.3s ease;
     z-index: 10;
 }
-.service .card:hover .card-icon {
+.service-list .card:hover .card-icon {
     -webkit-transition: left 0.3s ease, right 0.3s ease;
     transition: left 0.3s ease, right 0.3s ease;
     right: calc(50% - 65px);
 }
-.service .card-footer {
+.service-list .card-footer {
     background: transparent;
     border: 0;
     font-size: 13px;
 }
-.service .card .card-icon {
+.service-list .card .card-icon {
     background-image: url(../images/pattern/pattern.png);
     background-position: center top;
     background-repeat: repeat;
     background-size: 80px;
     cursor: pointer;
 }
-.service .card.one{
+.service-list .card.one{
     background: #B0D9B8;
 }
-.service .card.one .card-icon {
+.service-list .card.one .card-icon {
     background-color: #9FD1A9;
 }
-.service .card.one .icon-plus:before,
-.service .card.one .icon-plus:after {
+.service-list .card.one .icon-plus:before,
+.service-list .card.one .icon-plus:after {
     background-color: #93C69D;
 }
-.service .card.two {
+.service-list .card.two {
     background: #D1C6BF;
 }
-.service .card.two .card-icon {
+.service-list .card.two .card-icon {
     background-color: #C5B5AA;
 }
-.service .card.two .icon-plus:before,
-.service .card.two .icon-plus:after {
+.service-list .card.two .icon-plus:before,
+.service-list .card.two .icon-plus:after {
     background-color: #BAABA1;
 }
-.service .card.three {
+.service-list .card.three {
     background: #EACE9F;
 }
-.service .card.three .card-icon{
+.service-list .card.three .card-icon{
     background-color: #DFC08C;
 }
-.service .card.three .icon-plus:before,
-.service .card.three .icon-plus:after {
+.service-list .card.three .icon-plus:before,
+.service-list .card.three .icon-plus:after {
     background-color: #D6B988;
 }
-.service .card.four {
+.service-list .card.four {
     background: #E1B7A7;
 }
-.service .card.four .card-icon {
+.service-list .card.four .card-icon {
     background-color: #D5A896;
 }
-.service .card.four .icon-plus:before,
-.service .card.four .icon-plus:after {
+.service-list .card.four .icon-plus:before,
+.service-list .card.four .icon-plus:after {
     background-color: #C19C8D;
 }
 
 /* Treat to set up transition for card
 * Begin
 * --------------------------------------- */
-.service .card-deck.animation {
+.service-list.animation {
     position: relative;
     width: 1140px;
     height: 400px;
     margin: 1rem auto 0;
 }
-.service .card-deck.animation .card {
+.service-list.animation .card {
     height: initial;
     top: 0;
     bottom: 80px;
@@ -798,24 +863,24 @@ body {
               z-index .2s linear;
 
 }
-.service .card-deck.animation .card.one {
+.service-list.animation .card.one {
     left: 0;
     right: 885px;
 }
-.service .card-deck.animation .card.two {
+.service-list.animation .card.two {
     left: 285px;
     right: 600px;
 }
-.service .card-deck.animation .card.three {
+.service-list.animation .card.three {
     left: 570px;
     right: 315px;
 }
-.service .card-deck.animation .card.four {
+.service-list.animation .card.four {
     left: 855px;
     right: 30px;
 }
-.service .card-deck.animation .card.expanding,
-.service .card-deck.animation .card.expanded {
+.service-list.animation .card.expanding,
+.service-list.animation .card.expanded {
     top: 0;
     right: 100px;
     bottom: 0;
@@ -823,44 +888,46 @@ body {
     z-index: 1000;
     visibility: visible;
 }
-.service .card-deck.processing .card,
-.service .card-deck.processed .card {
+.service-list.processing .card,
+.service-list.processed .card {
     visibility: hidden;
 }
-.service .card-deck.animation .card.expanding .card-icon,
-.service .card-deck.animation .card.expanded .card-icon {
+.service-list.animation .card.expanding .card-icon,
+.service-list.animation .card.expanded .card-icon {
     display: none;
 }
 
-.service .card .card-close,
-.service .card .card-text {
+.service-list .card .card-close,
+.service-list .card .card-text {
     display: none;
 }
-.service .card .card-close > a {
+.service-list .card .card-close > a {
     right: 15px;
     top: 15px;
 }
-.service .card.expanding .card-close,
-.service .card.expanded .card-close,
-.service .card.expanding .card-text,
-.service .card.expanded .card-text {
+.service-list .card.expanding .card-close,
+.service-list .card.expanded .card-close,
+.service-list .card.expanding .card-text,
+.service-list .card.expanded .card-text {
     display: block;
 }
 /* Treat to set up transition for card
 * End
 * --------------------------------------- */
 
-
 .mission .mission-content {
     height: 400px;
 }
 
-.contact .contact-content .form-control {
+.hp-form .form-control {
     height: calc(1.5em + .75rem + 15px);
-    border: 0;
     border-radius: 0;
+    -webkit-appearance: none;
 }
-.contact .contact-content textarea.form-control {
+.hp-form.light .form-control {
+    border: 0;
+}   
+.hp-form textarea.form-control {
     height: calc(1.5em + .75rem + 82px)
 }
 .text-count {
@@ -878,12 +945,11 @@ body {
     padding-right: 50px;
 }
 
-/*.contact .contact-content .btn {
-    background: #eca633 url(../images/pattern/pattern.png) left top repeat;
-    background-size: contain;
-    padding: .575rem .75rem;
-    border-radius: 0;
-}*/
+.article-nav {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #cdcdcd;
+}
 
 /* 
   ##Device = Desktops Resolution 2K
