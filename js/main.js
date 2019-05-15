@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
 			  	slidesToScroll: 1,
   				infinite: true,
   				autoplay: true,
-  				autoplaySpeed: 2000,
+  				autoplaySpeed: 10000,
   				arrows: false,
   				dots: false
   			});
@@ -187,6 +187,22 @@ jQuery(document).ready(function($) {
 					$(target).slick('slickFilter', type);
 				}
 				$(target).slick('slickGoTo',0);
+			});
+
+			// Apply next/prev for library media
+			$('[data-slick-action]').on('click', function(event) {
+				event.preventDefault();
+				const target = $(this).attr('data-target');
+				const type = $(this).attr('data-action-type');
+
+				switch(type) {
+					case 'prev': 
+						$(target).slick('slickPrev');
+						break;
+					case 'next':
+						$(target).slick('slickNext');	
+						break;
+				}
 			});
         }
 	}

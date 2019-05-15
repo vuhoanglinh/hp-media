@@ -359,7 +359,7 @@ body {
 .logo {
     position: fixed;
     background: url(../images/logo.jpg) center top no-repeat;
-    background-size: 100%;
+    background-size: contain;
     width: 100px;
     height: 100px;
     z-index: 1000;
