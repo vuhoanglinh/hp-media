@@ -127,10 +127,19 @@ jQuery(document).ready(function($) {
         	// Apply carousel for library media
         	$('[data-slick]').slick({
 			  	slidesToShow: 4,
-			  	slidesToScroll: 3,
+			  	slidesToScroll: 4,
   				arrows: true,
   				infinite: false,
   				responsive: [
+  					{
+				      	breakpoint: 1200,
+				      	settings: {
+					        slidesToShow: 3,
+					        slidesToScroll: 3,
+					        arrows: true,
+  							infinite: false,
+					    }
+				    },
 				    {
 				      	breakpoint: 1024,
 				      	settings: {
@@ -144,7 +153,7 @@ jQuery(document).ready(function($) {
 				      	breakpoint: 600,
 				      	settings: {
 					        slidesToShow: 2,
-					        slidesToScroll: 1,
+					        slidesToScroll: 2,
 					        arrows: true,
   							infinite: false,
 					    }
