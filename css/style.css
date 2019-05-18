@@ -1074,8 +1074,8 @@ body {
 */
 
 @media only screen and (min-width: 1921px) {
-    /* Defining each sectino background and styles
-    * --------------------------------------- */
+  /* Defining each sectino background and styles
+  * --------------------------------------- */
   .home,
     .home1 {
     background: url(../images/bg-home@2x.jpg) center no-repeat;
@@ -1115,6 +1115,9 @@ body {
 @media (min-width: 320px) {
   body {
     font-size: .7rem;
+  }
+  #fp-nav {
+    top: 50%;
   }
   .container {
     padding-right: 75px;
@@ -1192,239 +1195,7 @@ body {
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-  .fp-tableCell {
-    padding-top: 30px;
-  }
-  .fp-slidesNav.fp-bottom {
-    bottom: 10px;
-    left: 30px!important;
-  }
-  .fp-controlArrow.fp-prev {
-    left: 25px;
-  }
-  .fp-controlArrow.fp-next {
-    right: 85px;
-  }
-  .fp-controlArrow.fp-prev, .slick-prev:before, .fp-controlArrow.fp-next, .slick-next:before, .btn-prev, .btn-next {
-    background: url(../images/icon-arrow-white.svg), url(../images/pattern/pattern.png);
-    background-color: #211f1f;
-    background-position: center, center;
-    background-position: center, center;
-    background-repeat: no-repeat, repeat;
-    background-size: 15px, contain;
-    width: 30px;
-    height: 30px;
-    padding: 5px 10px;
-    color: #fff;
-    border: 0;
-    border-radius: 0;
-  }
-
-  .container {
-    padding-right: 75px;
-    padding-left: 15px;
-  }
-  .navbar-content {
-    width: 60px;
-  }
-  .navbar-content .btn-nav,
-  .navbar-content .scrolltop a, 
-  .navbar-content .lang {
-    height: 40px;
-    width: 60px;
-  }
-  .navbar-content .lang {
-    min-height: 40px;
-  }
-  .navbar-content .lang .collapse,
-  .navbar-content .lang .collapsing {
-    margin: -20px 0 0;
-  }
-  .navbar-content .lang .list-group-item {
-    padding: .25rem 1.25rem;
-    font-size: .8rem;
-  }
-  .navbar-content .scrolltop {
-    bottom: 10px;
-  }
-  .navbar-content .social {
-    bottom: 50px;
-    display: none;
-  }
-  .navbar-content .social li a {
-    height: 25px;
-    width: 60px;
-  }
-  .navbar-content .active-section {
-    display: none;
-  }
-  .navbar-wrapper .navbar {
-    width: 400px;
-    padding: 1rem 1rem 0; 
-  }
-  .navbar-wrapper .navbar.show {
-    right: 60px;
-  }
-  .navbar-wrapper .navbar .nav-link {
-    font-size: 14px;
-  }
-  .navbar-wrapper .navbar .content {
-    bottom: 0;
-    padding: 1em 2rem;
-  }
-  .navbar-wrapper .navbar .content .btn, 
-  .btn-hp {
-    font-size: 14px;
-    padding: .275rem .75rem;
-  }
-  .navbar-wrapper .navbar .content h5 {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  .navbar-wrapper .navbar .content p {
-    font-size: 12px;
-    margin-bottom: 5px;
-  }
-
-  .slide .intro {
-    bottom: 30px;
-    left: 30px;
-  }
-  .slide .intro h1 {
-    font-size: 42px;
-  }
-  .slide .intro p {
-    font-size: 18px;
-    margin-bottom: .5rem;
-  }
-
-  .hp-title {
-    font-size: 28px;
-    margin-bottom: .5rem;
-  }
-
-  .hp-text {
-    font-size: 14px;
-    font-weight: 300;
-  }
-
-  .hp-text-small {
-    font-size: .7rem;
-  }
-
-  .sidebar .service-list {
-    display: grid;
-    grid-template-columns: repeat(2, [col] 1fr);
-    grid-column-gap: 40px;
-  }
-
-  .service-list.animation {
-    height: 250px;
-  }
-  .service-list.animation .card.one {
-    left: 0;
-    right: calc(50% + 5px);
-    top: 0;
-    bottom: 130px;
-  }
-  .service-list.animation .card.two {
-    left: calc(50% + 5px);
-    right: 0;
-    bottom: 130px;
-    top: 0;
-  }
-
-  .service-list.animation .card.three {
-    left: 0;
-    right: calc(50% + 6px);
-    top: 130px;
-    bottom: 0;
-  }
-  .service-list.animation .card.four {
-    left: calc(50% + 6px);
-    right: 0;
-    top: 130px;
-    bottom: 0;
-  }
-
-  .service-list.animation .card.expanding,
-  .service-list.animation .card.expanded {
-    top: 0;
-    right: 0;
-    bottom: 10px;
-    left: 0;
-    z-index: 1000;
-    visibility: visible;
-  }
-
-  .service-list .card .card-title {
-    font-size: 24px;
-  }
-  .service-list.animation .card .card-icon {
-    width: 130px;
-    height: 130px;
-    padding: 20px;
-    top: 50%;
-    right: calc(50% - 65px);
-    border-radius: 50%;
-  }
-  .service-list .card .card-icon {
-    width: 130px;
-    height: 130px;
-    padding: 50px;
-    top: 85px;
-    right: calc(50% - 65px);
-    border-radius: 50%;
-  }
-  .service-list .card .card-icon .icon-plus {
-    display: inline-block;
-  }
-  .service-list .card .card-body {
-    padding: .75rem;
-  }
-  .service-list .card .card-close > a {
-    z-index: 12;
-  }
-  .service-list .card .card-title {
-    font-size: 18px;
-    position: relative;
-    z-index: 11;
-  }
-  .service-list.animation .card-footer {
-    padding: .5rem;
-    position: relative;
-    z-index: 10;
-    display: none;
-  }
-
-  .partner .partner-list .item {
-    min-height: 6em;
-  }
-
-  .library-list .card-body {
-    padding: .75rem .75em;
-  }
-  .library-list .card-img-top {
-    max-height: 120px;
-  }
-  .library-list .slick-prev,
-  .library-list .slick-next {
-    bottom: -50px;
-  }
-  .library-content .nav-link,
-  .library-content .nav-link:before {
-    padding: .5rem .5rem;
-  }
-
-  .hp-form .form-control {
-    height: calc(.5em + .75rem + 15px);
-    border-radius: 0;
-    -webkit-appearance: none;
-    font-size: .7rem;
-  }
-  .hp-form textarea.form-control {
-    height: calc(.5em + .75rem + 64px);
-  }
+  
 }
 
 /* Medium devices (tablets, 768px and up)*/
@@ -1453,6 +1224,9 @@ body {
     color: #fff;
     border: 0;
     border-radius: 0;
+  }
+  #fp-nav {
+    top: 50%;
   }
 
   .logo {
@@ -1656,6 +1430,12 @@ body {
   .library-list .slick-next {
     bottom: -70px;
   }
+  .library-list .slick-prev {
+    right: 100px;
+  }
+  .library-list .slick-next {
+    right: 15px;
+  }
 
   .hp-form .form-control {
     height: calc(1.5em + .75rem + 15px);
@@ -1668,12 +1448,11 @@ body {
   }
 }
 
-
-/* Landscape */
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 812px)
-and (orientation : landscape) { 
+/* Landscape Iphone X*/
+@media only screen and (min-width: 576px) and (max-width: 820px) and (orientation: landscape)  { 
+  body {
+    font-size: .7rem;
+  }
   .fp-tableCell {
     padding-top: 30px;
   }
@@ -1705,6 +1484,7 @@ and (orientation : landscape) {
   .container {
     padding-right: 75px;
     padding-left: 15px;
+    max-width: 540px;
   }
   .logo {
     width: 50px;
@@ -1726,18 +1506,17 @@ and (orientation : landscape) {
   }
   .navbar-content .lang .collapse,
   .navbar-content .lang .collapsing {
-    margin: -20px 0 0;
+    margin: -15px 0 0;
   }
   .navbar-content .lang .list-group-item {
     padding: .25rem 1.25rem;
     font-size: .8rem;
   }
   .navbar-content .scrolltop {
-    bottom: 10px;
+    bottom: 0;
   }
   .navbar-content .social {
-    bottom: 50px;
-    display: none;
+    bottom: 30px;
   }
   .navbar-content .social li a {
     height: 25px;
@@ -1903,7 +1682,14 @@ and (orientation : landscape) {
   .library-content .nav-link:before {
     padding: .5rem .5rem;
   }
-  
+
+  .library-list .slick-prev {
+    right: 50px;
+  }
+  .library-list .slick-next {
+    right: -5px;
+  }
+
   .mission:after {
     height: 200px;
     width: 150px;
@@ -1982,12 +1768,17 @@ and (orientation : landscape) {
     visibility: visible;
   }
 
+  .service-list.animation .card .card-icon, 
   .service-list .card .card-icon {
     width: 130px;
     height: 130px;
     padding: 50px;
     top: 100px;
     right: -65px;
+  }
+  .service-list.animation .card:hover .card-icon,
+  .service-list .card:hover .card-icon {
+    right: calc(50% - 65px);
   }
 
   .partner .partner-list {
@@ -2014,6 +1805,12 @@ and (orientation : landscape) {
 
   .library-content .nav-link {
     padding: .5rem 1rem;
+  }
+  .library-list .slick-prev {
+    right: 100px;
+  }
+  .library-list .slick-next {
+    right: -25px;
   }
 }
 
