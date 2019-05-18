@@ -484,6 +484,7 @@ body {
 
 .navbar-content .lang a {
   color: #353535;
+  text-decoration: none;
 }
 
 .navbar-content .lang .text {
@@ -1116,11 +1117,51 @@ body {
   body {
     font-size: .7rem;
   }
+  .fp-tableCell {
+    padding-top: 70px;
+  }
+  .fp-slidesNav.fp-bottom {
+    bottom: 30px;
+    left: 30px!important;
+  }
+  .fp-controlArrow.fp-prev {
+    left: 25px;
+  }
+  .fp-controlArrow.fp-next {
+    right: 65px;
+  }
+  .fp-controlArrow.fp-prev, .slick-prev:before, .fp-controlArrow.fp-next, .slick-next:before, .btn-prev, .btn-next {
+    background: url(../images/icon-arrow-white.svg), url(../images/pattern/pattern.png);
+    background-color: #211f1f;
+    background-position: center, center;
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    background-size: 15px, contain;
+    width: 30px;
+    height: 30px;
+    padding: 5px 10px;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+  }
   #fp-nav {
     top: 50%;
   }
+  #fp-nav.fp-right {
+    right: 8px;
+  }
+  .icon-close {
+    width: 24px;
+    height: 24px;
+  }
+  .icon-close:before, .icon-close:after {
+    left: 15px;
+    height: 24px;
+    width: 2px;
+  }
+
   .container {
-    padding-right: 75px;
+    padding-right: 55px;
     padding-left: 15px;
   }
   .logo {
@@ -1138,47 +1179,197 @@ body {
   .navbar-content .scrolltop a .text {
     margin-top: 5px;
   }
+  .navbar-content {
+    width: 40px;
+  }
+  .navbar-content .btn-nav {
+    padding: .375rem;
+  }
+  .navbar-content .btn-nav,
+  .navbar-content .scrolltop a, 
+  .navbar-content .lang {
+    height: 40px;
+    width: 40px;
+  }
+  .navbar-content .lang {
+    min-height: 40px;
+  }
+  .navbar-content .lang .collapse,
+  .navbar-content .lang .collapsing {
+    margin: -15px 0 0;
+  }
+  .navbar-content .lang .list-group-item {
+    padding: .25rem;
+    font-size: .7rem;
+  }
+  .navbar-content .scrolltop {
+    bottom: 10px;
+  }
+  .navbar-content .social {
+    bottom: 50px;
+  }
+  .navbar-content .social li a {
+    height: 25px;
+    width: 40px;
+  }
+  .navbar-content .active-section {
+    display: none;
+  }
+  .navbar-wrapper .navbar {
+    width: 200px;
+    right: -200px;
+    padding: 3em 1rem 0; 
+  }
+  .navbar-wrapper .navbar.show {
+    right: 40px;
+  }
+  .navbar-wrapper .navbar .nav-link {
+    font-size: 14px;
+  }
+  .navbar-wrapper .navbar .content {
+    bottom: 0;
+    padding: 1em 2rem;
+  }
+  .navbar-wrapper .navbar .content .btn, 
+  .btn-hp {
+    font-size: 14px;
+    padding: .275rem .75rem;
+  }
+  .navbar-wrapper .navbar .content h5 {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .navbar-wrapper .navbar .content p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .slide .intro {
+    bottom: 50px;
+    left: 30px;
+  }
+  .slide .intro h1 {
+    font-size: 34px;
+    margin-bottom: .5rem;
+  }
+  .slide .intro p {
+    font-size: 14px;
+    margin-bottom: .5rem;
+  }
+
+  .hp-title {
+    font-size: 28px;
+    margin-bottom: .5rem;
+  }
+
+  .hp-text {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .hp-text-small {
+    font-size: .7rem;
+  }
 
   .sidebar .service-list {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(1, [col] 1fr);
   }
+
   .service-list.animation {
-    height: 600px;
+    height: 400px;
   }
   .service-list.animation .card.one {
     left: 0;
-    right: calc(50% + 15px);
+    right: calc(50% + 5px);
     top: 0;
-    bottom: 315px;
+    bottom: 205px;
   }
   .service-list.animation .card.two {
-    left: calc(50% + 15px);
+    left: calc(50% + 5px);
     right: 0;
-    bottom: 315px;
+    bottom: 205px;
     top: 0;
   }
 
   .service-list.animation .card.three {
     left: 0;
-    right: calc(50% + 15px);
-    top: 315px;
+    right: calc(50% + 6px);
+    top: 205px;
     bottom: 0;
   }
   .service-list.animation .card.four {
-    left: calc(50% + 15px);
+    left: calc(50% + 6px);
     right: 0;
-    top: 315px;
+    top: 205px;
     bottom: 0;
   }
 
   .service-list.animation .card.expanding,
   .service-list.animation .card.expanded {
     top: 0;
-    right: 100px;
-    bottom: 0;
+    right: 0;
+    bottom: -10px;
     left: 0;
     z-index: 1000;
     visibility: visible;
+  }
+  .service-list .card .card-close > a {
+    right: 15px;
+    top: 10px;
+  }
+  .service-list .card .card-title {
+    font-size: 24px;
+  }
+  .service-list.animation .card .card-icon {
+    width: 100px;
+    height: 100px;
+    padding: 35px;
+    top: calc(50% - 25px);
+    right: calc(50% - 50px);
+    border-radius: 50%;
+  }
+  .service-list .card .card-icon {
+    width: 130px;
+    height: 130px;
+    padding: 50px;
+    top: 85px;
+    right: calc(50% - 65px);
+    border-radius: 50%;
+  }
+  .service-list .card .card-icon .icon-plus {
+    display: inline-block;
+  }
+  .service-list .card .card-body {
+    padding: .75rem;
+  }
+  .service-list .card .card-close > a {
+    z-index: 12;
+  }
+  .service-list .card .card-title {
+    font-size: 18px;
+    position: relative;
+    z-index: 11;
+  }
+  .service-list.animation .card-footer {
+    padding: .5rem;
+    position: relative;
+    z-index: 10;
+    display: none;
+  }
+
+  .partner .partner-list {
+    display: grid;
+    grid-template-columns: repeat(4, [col] 1fr);
+  }
+
+  .partner .partner-list .item {
+    min-height: 8em;
+    padding: .75rem;
+  }
+  .partner .partner-list .item.item-text {
+    grid-column: col 1 / span 4;
+    grid-row: 3;
   }
 
   .library-content .nav {
@@ -1188,8 +1379,74 @@ body {
     margin-top: 1rem
   }
   .mission:after {
-    height: 200px;
-    width: 150px;
+    bottom: 0;
+    right: 50px;
+    height: 350px;
+    width: 250px;
+    z-index: 100;
+  }
+  .library-content .nav {
+    justify-content: center;
+  }
+  .library-content .nav-link,
+  .library-content .nav-link:before {
+    padding: .5rem .7rem;
+  }
+  .library-list .card-body {
+    padding: 1.75rem .85em;
+  }
+  .library-list .card-img-top {
+    max-height: 100%;
+  }
+
+  .library-list .slick-prev,
+  .library-list .slick-next {
+    bottom: calc(50% + 25px);
+  }
+  .library-list .slick-prev {
+    right: unset;
+    left: 35px;
+  }
+  .library-list .slick-next {
+    right: 15px;
+  }
+  .library-content .nav .nav-item:first-child>.nav-link, 
+  .library-content .nav .nav-item:first-child>.nav-link:before {
+    padding-left: .7rem;
+  }
+
+  .service-content .hp-title,
+  .partner-content .hp-title,
+  .library-content .hp-title,
+  .mission-content .hp-title,
+  .contact-content .hp-title {
+    text-align: center;
+  }
+  .library-content .navbar-brand.hp-title {
+    margin: auto;
+  }
+  .hp-form .form-control {
+    height: calc(.5em + .75rem + 15px);
+    border-radius: 0;
+    -webkit-appearance: none;
+    font-size: .7rem;
+  }
+  .hp-form textarea.form-control {
+    height: calc(.5em + .75rem + 64px);
+  }
+
+  .wrapper-top {
+    margin-bottom: 20px;
+  }
+  .article-nav {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .btn-hp.arrow-black {
+    background: url(../images/icon-arrow-black.svg) 10px center no-repeat, url(../images/pattern/pattern.png) left top repeat;
+    background-color: #cdcdcd;
+    background-size: 20px ,contain;
+    padding: 0.275rem 1.15rem .275rem 2.25rem;
   }
 }
 
@@ -1203,6 +1460,17 @@ body {
   body {
     font-size: 1rem;
   }
+  .icon-close {
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+  }
+  .icon-close:before, .icon-close:after {
+    left: 15px;
+    height: 33px;
+    width: 2px;
+  }
   .fp-tableCell {
     padding-top: 150px;
   }
@@ -1210,7 +1478,12 @@ body {
     bottom: 80px;
     left: 50px!important;
   }
-  
+  .fp-controlArrow.fp-prev {
+    right: 85px;
+  }
+  .fp-controlArrow.fp-next {
+    right: 85px;
+  }
   .fp-controlArrow.fp-prev, .slick-prev:before, .fp-controlArrow.fp-next, .slick-next:before, .btn-prev, .btn-next {
     background: url(../images/icon-arrow-white.svg), url(../images/pattern/pattern.png);
     background-color: #211f1f;
@@ -1229,11 +1502,20 @@ body {
     top: 50%;
   }
 
+  #fp-nav.fp-right {
+    right: 17px;
+  }
   .logo {
     width: 100px;
     height: 100px;
     left: 55px;
     top: 25px;
+  }
+  .navbar-content {
+    width: 60px;
+  }
+  .navbar-content .btn-nav {
+    padding: .375rem .75rem;
   }
   .navbar-content .btn-nav,
   .navbar-content .scrolltop a, 
@@ -1274,6 +1556,7 @@ body {
   }
   .navbar-wrapper .navbar {
     width: 400px;
+    right: -400px;
     padding: 8em 2rem 0; 
   }
   .navbar-wrapper .navbar.show {
@@ -1368,7 +1651,10 @@ body {
     z-index: 1000;
     visibility: visible;
   }
-
+  .service-list .card .card-close > a {
+    right: 15px;
+    top: 15px;
+  }
   .service-list .card .card-title {
     font-size: 24px;
   }
@@ -1415,6 +1701,9 @@ body {
     width: 450px;
     z-index: 100;
   }
+  .library-content .nav {
+    justify-content: unset;
+  }
   .library-content .nav-link,
   .library-content .nav-link:before {
     padding: .5rem .7rem;
@@ -1432,11 +1721,15 @@ body {
   }
   .library-list .slick-prev {
     right: 100px;
+    left: unset;
   }
   .library-list .slick-next {
     right: 15px;
   }
-
+  .library-content .nav .nav-item:first-child>.nav-link, 
+  .library-content .nav .nav-item:first-child>.nav-link:before {
+    padding-left: 0;
+  }
   .hp-form .form-control {
     height: calc(1.5em + .75rem + 15px);
     border-radius: 0;
@@ -1445,6 +1738,30 @@ body {
   }
   .hp-form textarea.form-control {
     height: calc(1.5em + .75rem + 82px);
+  }
+
+  .service-content .hp-title,
+  .partner-content .hp-title,
+  .library-content .hp-title,
+  .mission-content .hp-title,
+  .contact-content .hp-title {
+    text-align: center;
+  }
+  .library-content .navbar-brand.hp-title {
+    margin: auto;
+  }
+  .wrapper-top {
+    margin-bottom: 40px;
+  }
+  .article-nav {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+  }
+  .btn-hp.arrow-black {
+    background: url(../images/icon-arrow-black.svg) 10px center no-repeat, url(../images/pattern/pattern.png) left top repeat;
+    background-color: #cdcdcd;
+    background-size: 30px ,contain;
+    padding: 0.575rem 1.75rem .575rem 3.25rem;
   }
 }
 
@@ -1495,6 +1812,9 @@ body {
   .navbar-content {
     width: 60px;
   }
+  .navbar-content .btn-nav {
+    padding: .375rem .75rem;
+  }
   .navbar-content .btn-nav,
   .navbar-content .scrolltop a, 
   .navbar-content .lang {
@@ -1527,6 +1847,7 @@ body {
   }
   .navbar-wrapper .navbar {
     width: 400px;
+    right: -400px;
     padding: 1rem 1rem 0; 
   }
   .navbar-wrapper .navbar.show {
@@ -1811,6 +2132,17 @@ body {
   }
   .library-list .slick-next {
     right: -25px;
+  }
+
+  .service-content .hp-title,
+  .partner-content .hp-title,
+  .library-content .hp-title,
+  .mission-content .hp-title,
+  .contact-content .hp-title {
+    text-align: left;
+  }
+  .library-content .navbar-brand.hp-title {
+    margin: unset;
   }
 }
 
