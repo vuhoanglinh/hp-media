@@ -1117,6 +1117,21 @@ body {
   body {
     font-size: .7rem;
   }
+  .triangle-up,
+  .triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+  }
+
+  .triangle-up {
+    border-bottom: 8px solid #353535;
+  }
+
+  .triangle-down {
+    border-top: 8px solid #353535;
+  }
   .fp-tableCell {
     padding-top: 70px;
   }
@@ -1213,7 +1228,7 @@ body {
     width: 40px;
   }
   .navbar-content .active-section {
-    display: none;
+    display: block;
   }
   .navbar-wrapper .navbar {
     width: 200px;
@@ -1449,7 +1464,52 @@ body {
     padding: 0.275rem 1.15rem .275rem 2.25rem;
   }
 }
+@media (max-width: 320px) {
+  .fp-tableCell {
+    padding-top: 40px;
+  }
+  .library-content .nav-link, 
+  .library-content .nav-link:before,
+  .library-content .nav .nav-item:first-child>.nav-link, 
+  .library-content .nav .nav-item:first-child>.nav-link:before {
+    padding: .5rem;
+  }
+  .partner .partner-list .item {
+    min-height: 6em;
+  }
 
+  .partner-content {
+    padding-top: 40px;
+  }
+
+  .service-list.animation .card .card-title {
+    font-size: 14px;
+  }
+  .service-list.animation {
+    height: 360px;
+  }
+
+  .service-list.animation .card.one,
+  .service-list.animation .card.two {
+    bottom: 185px;
+  }
+
+  .service-list.animation .card.three,
+  .service-list.animation .card.four {
+    top: 185px;
+  }
+  .service-list.animation .card.expanding, 
+  .service-list.animation .card.expanded {
+    top: 0;
+    bottom: 0;
+  }
+
+  .mission:after {
+    height: 300px;
+    width: 250px;
+  }
+
+}
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
   
@@ -1470,6 +1530,21 @@ body {
     left: 15px;
     height: 33px;
     width: 2px;
+  }
+  .triangle-up,
+  .triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+  }
+
+  .triangle-up {
+    border-bottom: 9px solid #353535;
+  }
+
+  .triangle-down {
+    border-top: 9px solid #353535;
   }
   .fp-tableCell {
     padding-top: 150px;
@@ -2131,7 +2206,7 @@ body {
     right: 100px;
   }
   .library-list .slick-next {
-    right: -25px;
+    right: 15px;
   }
 
   .service-content .hp-title,
