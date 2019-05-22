@@ -1632,13 +1632,14 @@ body {
   .navbar-wrapper .navbar {
     width: 400px;
     right: -400px;
-    padding: 8em 2rem 0; 
+    padding: 5em 2rem 0; 
   }
   .navbar-wrapper .navbar.show {
     right: 60px;
   }
   .navbar-wrapper .navbar .nav-link {
     font-size: 18px;
+    padding: .6rem 1rem;
   }
   .navbar-wrapper .navbar .content {
     bottom: 1em;
