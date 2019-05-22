@@ -88,6 +88,7 @@ jQuery(document).ready(function($) {
 			console.log( location.hash );
 		    var hash = $(location).attr('hash').split('/')[0].replace('#', '').toLowerCase();
 		    $('#activeSection').text(translate(hash));
+		    $('#nav').removeClass('collapse').removeClass('show');
 		},
 		getUrlParameter: function(name, defaultValue = '') {
             name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
