@@ -2253,7 +2253,7 @@ body {
   }
 
   .service-list.animation {
-    height: 400px;
+    height: 430px;
   }
   .service-list.animation .card.one,
   .service-list.animation .card.two,
@@ -2286,7 +2286,7 @@ body {
   .service-list.animation .card.expanding,
   .service-list.animation .card.expanded {
     top: 0;
-    right: 100px;
+    right: 0;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -2297,7 +2297,7 @@ body {
     width: 130px;
     height: 130px;
     padding: 50px;
-    top: 100px;
+    top: 120px;
     right: -65px;
   }
 
